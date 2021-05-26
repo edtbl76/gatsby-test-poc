@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from '../components/layout'
 import Seo from "../components/seo"
 
-const IndexPage = (props) => {
+export default function IndexPage(props) {
   const data = props.data
   const location = props.location
 
@@ -30,6 +30,7 @@ const IndexPage = (props) => {
      <Seo title={"Home"} />
      <Bio />
 
+     <Link to={"/about"}>About Me</Link>
      <ol style={{ listStyle: `none` }}>
        {posts.map(post => {
          const title = post.frontmatter.title || post.fields.slug
@@ -65,8 +66,6 @@ const IndexPage = (props) => {
    </Layout>
   )
 }
-
-export default IndexPage
 
 export const pageQuery = graphql`
     query {

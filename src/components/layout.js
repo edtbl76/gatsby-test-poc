@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-const Layout = (props) => {
+export default function Layout(props) {
   const location = props.location
   const title = props.title
   const children = props.children
@@ -35,5 +35,3 @@ const Layout = (props) => {
 
   )
 }
-
-export default Layout
