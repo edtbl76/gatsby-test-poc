@@ -1,6 +1,13 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
+
+const ListLink = props => (
+  <li style={{display: `inline-block`, marginRight: `1rem` }}>
+    <Link to={props.to}>{props.children}</Link>
+  </li>
+)
+
 export default function Layout(props) {
   const location = props.location
   const title = props.title
@@ -24,7 +31,14 @@ export default function Layout(props) {
 
   return (
     <div className={"global-wrapper"} data-is-root-path={isRootPath}>
-      <header className={"global-header"}>{header}</header>
+      <header className={"global-header"}>
+        {header}
+        <ul>
+          <ListLink to={"/"}>Home</ListLink>
+          <ListLink to={"/about"}>About</ListLink>
+          {/*<ListLink to={"/contact"}>Contact</ListLink>*/}
+        </ul>
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with

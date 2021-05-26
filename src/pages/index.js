@@ -28,9 +28,10 @@ export default function IndexPage(props) {
   return (
    <Layout location={location} title={siteTitle}>
      <Seo title={"Home"} />
-     <Bio />
+     <header>
+       <Bio />
+     </header>
 
-     <Link to={"/about"}>About Me</Link>
      <ol style={{ listStyle: `none` }}>
        {posts.map(post => {
          const title = post.frontmatter.title || post.fields.slug
