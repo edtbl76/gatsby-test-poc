@@ -28,8 +28,9 @@ const IndexPage = (props) => {
 
   return (
    <Layout location={location} title={siteTitle}>
-     <Seo title={"All Posts"} />
+     <Seo title={"Home"} />
      <Bio />
+
      <ol style={{ listStyle: `none` }}>
        {posts.map(post => {
          const title = post.frontmatter.title || post.fields.slug
