@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import Link from "gatsby-link";
 
 export default function Bio() {
   const data = useStaticQuery(graphql`
@@ -12,17 +11,13 @@ export default function Bio() {
                     name
                     summary
                 }
-#                social {
-#                    twitter
-#                    email
-#                }
             }
         }
     }
   `)
 
   const author = data.site.siteMetadata?.author
-  // const social = data.site.siteMetadata?.social
+
 
 
   return (

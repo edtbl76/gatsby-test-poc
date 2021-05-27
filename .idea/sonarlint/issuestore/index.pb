@@ -1,6 +1,4 @@
 
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 f
 6content/blog/2019/12/28-welcome-to-the-jungle/index.md,1/8/1875b243d82f34329b49b3ff930097a93c80729b
 >
@@ -33,5 +31,3 @@ O
 playground/using-typescript.tsx,9/6/96dd9eda9bc2404c1b2e5e79560f95e327cb69f0
 =
 src/style.css,1/9/199c81d8625cb1aaa85a72e49e4ad72a9fed6766
-A
-gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd

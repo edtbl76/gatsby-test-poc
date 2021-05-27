@@ -2,13 +2,6 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import SocialLinks from "./sociallinks";
 
-
-const ListLink = props => (
-  <li style={{display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
-
 export default function Layout(props) {
   const location = props.location
   const title = props.title
@@ -34,10 +27,8 @@ export default function Layout(props) {
     <div className={"global-wrapper"} data-is-root-path={isRootPath}>
       <header className={"global-header"}>
         {header}
+        {/* Kludgy. Fix this later.*/}
         <ul>
-          {/*<ListLink to={"/"}>Home</ListLink>*/}
-          {/*<ListLink to={"/about"}>About</ListLink>*/}
-          {/*<ListLink to={"/contact"}>Contact</ListLink>*/}
           <SocialLinks />
         </ul>
       </header>
