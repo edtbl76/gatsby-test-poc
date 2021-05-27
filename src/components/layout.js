@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import SocialLinks from "./sociallinks";
 
 
 const ListLink = props => (
@@ -34,9 +35,10 @@ export default function Layout(props) {
       <header className={"global-header"}>
         {header}
         <ul>
-          <ListLink to={"/"}>Home</ListLink>
-          <ListLink to={"/about"}>About</ListLink>
+          {/*<ListLink to={"/"}>Home</ListLink>*/}
+          {/*<ListLink to={"/about"}>About</ListLink>*/}
           {/*<ListLink to={"/contact"}>Contact</ListLink>*/}
+          <SocialLinks />
         </ul>
       </header>
       <main>{children}</main>

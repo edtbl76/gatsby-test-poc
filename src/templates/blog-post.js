@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import { Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
@@ -7,7 +6,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 
-const BlogPostTemplate = (props) => {
+export default function BlogPostTemplate(props) {
   const data = props.data
   const location = props.location
 
@@ -68,8 +67,6 @@ const BlogPostTemplate = (props) => {
     </Layout>
   )
 }
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
